@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time Table</title>
+     <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #fefefe;
+        padding: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #5c6b73;
+        letter-spacing: 2px;
+    }
+
+    table {
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    th {
+        background-color: #cfe8f7;
+        color: #37474f;
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    td {
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #e0e0e0;
+        color: #555;
+    }
+
+    /* Alternate Row Colors */
+    tr:nth-child(even) {
+        background-color: #f9fbe7;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fffde7;
+    }
+
+    /* Day Column */
+    .highlight {
+        background-color: #b2dfdb;
+        color: #2e4f4f;
+        font-weight: bold;
+    }
+
+    /* Special Cells */
+    .special {
+        background-color: #ffe0b2;
+        color: #6d4c41;
+        font-weight: bold;
+    }
+
+    /* Lunch Cell */
+    .lunch {
+        background-color: #d1c4e9;
+        color: #4a148c;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        letter-spacing: 2px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>TIME TABLE</h1>
+    <table>
+        <tr>
+            <th>Day/Period</th>
+            <th>I<br>9:30-10:20</th>
+            <th>II<br>10:20-11:10</th>
+            <th>III<br>11:10-12:00</th>
+            <th>12:00-12:40</th>
+            <th>IV<br>12:40-1:30</th>
+            <th>V<br>1:30-2:20</th>
+            <th>VI<br>2:20-3:10</th>
+            <th>VII<br>3:10-4:00</th>
+        </tr>
+        <tr>
+            <td class="highlight" class="even"><b>Monday</b></td>
+            <td class="odd">Eng</td>
+            <td class="even">Mat</td>
+            <td class="odd">Che</td>
+            <td rowspan="6" class="special" class="odd"><b>LUNCH</b></td>
+            <td colspan="3" class="special" class="odd">LAB</td>
+            <td class="even">Phy</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Tuesday</b></td>
+            <td colspan="3" class="special">LAB</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td class="special">SPORTS</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Wednesday</b></td>
+            <td>Mat</td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3">LIBRARY</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Thursday</b></td>
+            <td>Phy</td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td colspan="3" class="special">LAB</td>
+            <td>Mat</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Friday</b></td>
+            <td colspan="3" class="special">LAB</td>
+            <td>Mat</td>
+            <td>Che</td>
+            <td>Eng</td>
+            <td>Phy</td>
+        </tr>
+        <tr>
+            <td class="highlight"><b>Saturday</b></td>
+            <td>Eng</td>
+            <td>Che</td>
+            <td>Mat</td>
+            <td colspan="3">SEMINAR</td>
+            <td class="special">SPORTS</td>
+        </tr>
+    </table>
+</body>
+
+</html>
