@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title> Grail Layout</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            background:#e6e6e6;
+
+            display:grid;
+
+            grid-template-areas:
+                "header header"
+                "content sidebar"
+                "footer footer";
+
+            grid-template-columns: 1fr 300px;
+            grid-template-rows: 100px 1fr 80px;
+
+            gap:10px;
+            padding:10px;
+        }
+
+        /* Header */
+        header{
+            grid-area:header;
+            background:#c496ed;
+            color:rgb(18, 18, 18);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            border-radius:10px;
+            font-size:32px;
+            font-weight:bold;
+        }
+
+        /* Content */
+        .content{
+            grid-area:content;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            color:rgb(18, 18, 18);
+            font-size:22px;
+            line-height:1.8;
+
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar */
+        .sidebar{
+            grid-area:sidebar;
+            background:white;
+
+            padding:20px;
+            border-radius:10px;
+
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        /* Sidebar Boxes */
+        .box{
+            background:#c496ed;
+            color:rgb(18, 18, 18);
+
+            padding:60px;
+            text-align:center;
+
+            border-radius:10px;
+            font-size:22px;
+            font-weight:bold;
+
+            transition:0.3s;
+            cursor:pointer;
+        }
+
+        .box:hover{
+            background:#c496ed;
+            transform:translateY(-5px);
+        }
+
+        /* Footer */
+        footer{
+            grid-area:footer;
+            background:#c496ed;
+            color:rgb(18, 18, 18);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            border-radius:10px;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+
+            body{
+
+                grid-template-areas:
+                    "header"
+                    "content"
+                    "sidebar"
+                    "footer";
+
+                grid-template-columns:1fr;
+                grid-template-rows:
+                    100px
+                    auto
+                    auto
+                    80px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        Header
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Content</h2>
+    </div>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar">
+
+        <div class="box">HTML</div>
+
+        <div class="box">CSS</div>
+
+        <div class="box">JavaScript</div>
+
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        Footer
+    </footer>
+
+</body>
+</html>
