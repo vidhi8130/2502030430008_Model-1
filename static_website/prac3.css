@@ -1,0 +1,96 @@
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e7afec, #cf8cf6);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Marquee */
+marquee {
+    font-size: 20px;
+    color: white;
+    background-color: #eaaeee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Form Container */
+form {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Profile Image */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 3px solid #555;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Textarea */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Video & Audio */
+video,
+audio {
+    display: block;
+    margin: 20px auto;
+}

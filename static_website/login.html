@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Tourify</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /* =========================
+               Open Popup
+            ========================= */
+
+            $("#loginBtn").click(function () {
+
+                $("#loginPopup").css({
+                    "visibility": "visible",
+                    "opacity": "1"
+                });
+
+            });
+
+            /* =========================
+               Close Popup + Redirect
+            ========================= */
+
+            $("#closePopup").click(function () {
+
+                window.location.href = "home.html";
+
+            });
+
+        });
+
+    </script>
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">
+
+            <div class="logo"><img src="logo.png"></div>
+
+
+        </div>
+
+
+
+    </nav>
+
+    <!-- Login Section -->
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <!-- Left Side -->
+
+            <div class="login-image">
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Login to continue your journey with Tourify and
+                    explore amazing destinations around the world.
+                </p>
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="login-form">
+
+                <h2>Login Account</h2>
+
+                <form>
+
+                    <!-- Email -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email" placeholder="Email Address" required>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" placeholder="Password" required>
+
+                    </div>
+
+                    <!-- Remember Me -->
+
+                    <div class="options">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#">Forgot Password?</a>
+
+                    </div>
+
+                    <!-- Login Button -->
+
+                    <button type="button" id="loginBtn" class="login-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <!-- Register -->
+
+                <p class="register-text">
+
+                    Don't have an account?
+
+                    <a href="registration.html">Register</a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =========================
+     Login Success Popup
+========================= -->
+
+    <div class="popup" id="loginPopup">
+
+        <div class="popup-content">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>Login Successful!</h2>
+
+            <p>
+                Welcome back to Tourify.
+            </p>
+
+            <button id="closePopup">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

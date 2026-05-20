@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Trip - Tourify</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="booking.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         Navbar
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            <div class="logo"><img src="logo.png"></div>
+
+        </div>
+
+    </nav>
+
+    <!-- =========================
+         Hero Section
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Book Your Dream Trip</h1>
+
+            <p>
+                Plan unforgettable vacations with Tourify travel packages.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         Booking Form
+    ========================= -->
+
+    <section class="booking-section">
+
+        <div class="booking-container">
+
+            <!-- Left Side -->
+
+            <div class="booking-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop">
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="booking-form">
+
+                <h2>Reserve Your Trip</h2>
+
+                <form>
+
+                    <!-- Full Name -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input type="text" placeholder="Full Name" required>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email" placeholder="Email Address" required>
+
+                    </div>
+
+                    <!-- Phone -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input type="tel" placeholder="Phone Number" required>
+
+                    </div>
+
+                    <!-- Destination -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <select required>
+
+                            <option>Select Destination</option>
+
+                            <option>Maldives</option>
+
+                            <option>Switzerland</option>
+
+                            <option>Bali</option>
+
+                            <option>Paris</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Date -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-calendar"></i>
+
+                        <input type="date" required>
+
+                    </div>
+
+                    <!-- Travelers -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <input type="number" placeholder="Number of Travelers" required>
+
+                    </div>
+
+                    <!-- Message -->
+
+                    <textarea placeholder="Special Request"></textarea>
+
+                    <!-- Button -->
+
+                    <button type="submit">
+
+                        Book Now
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     Booking Success Popup
+========================= -->
+
+    <div class="popup" id="bookingPopup">
+
+        <div class="popup-content">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>Trip Booked Successfully!</h2>
+
+            <p>
+                Thank you for booking with Tourify.
+                Your dream vacation is confirmed.
+            </p>
+
+            <button id="closePopup">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        <h2>Tourify</h2>
+
+        <p>
+            Explore the world with unforgettable travel experiences.
+        </p>
+
+        <p class="copyright">
+            © 2026 Tourify. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

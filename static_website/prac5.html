@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background: linear-gradient(to top, #87ceeb 100%, #ffffff);
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ADD THIS CSS */
+
+        .clouds {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+      }
+
+/* Cloud Design */
+.cloud {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.9;
+}
+
+/* Cloud circles */
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 15px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    right: 15px;
+}
+
+/* Individual Clouds */
+.cloud1 {
+    top: 40px;
+    left: -200px;
+    animation: cloudMove 30s linear infinite;
+}
+
+.cloud2 {
+    top: 80px;
+    left: -300px;
+    transform: scale(0.8);
+    animation: cloudMove 40s linear infinite;
+}
+
+.cloud3 {
+    top: 55px;
+    left: -400px;
+    transform: scale(1.2);
+    animation: cloudMove 50s linear infinite;
+}
+
+/* Cloud Animation */
+@keyframes cloudMove {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 110%;
+    }
+}
+
+         /* Mountains */
+        .mountains {
+            position: absolute;
+            bottom: 180px;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .mountain {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-bottom: 300px solid #16cc49;
+        }
+
+        .mountain1 {
+            left: 1%;
+            color: #16cc49;
+        }
+
+        .mountain2 {
+            left: 25%;
+            color: #16cc49;
+        }
+
+        .mountain3 {
+            left: 50%;
+            color: #16cc49;
+        }
+
+        .mountain4 {
+            left: 75%;
+            color: #16cc49;
+        }
+
+        /* Snow caps */
+        .mountain::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -60px;
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid white;
+        }
+
+       
+
+
+        /* Road
+        .road {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 180px;
+            background: #333;
+            overflow: hidden;
+        }
+
+        /* Road lines */
+        /* .road::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 10px;
+            background: repeating-linear-gradient(
+                to right,
+                white 0 50px,
+                transparent 50px 100px
+            );
+            top: 50%;
+            transform: translateY(-50%);
+            animation: roadMove 3s linear infinite;
+        }  
+
+        @keyframes roadMove {
+            from {
+                transform: translateX(0) translateY(-50%);
+            }
+            to {
+                transform: translateX(-100px) translateY(-50%);
+            }
+        }
+
+        /* Car animation */
+        .car {
+            position: absolute;
+            bottom: 80px;
+            left: -300px;
+            animation: moveCar 8s linear infinite;
+        }
+
+        @keyframes moveCar {
+            0% {
+                left: -300px;
+            }
+
+            100% {
+                left: 110%;
+            }
+        }
+
+        /* Wheel rotation */
+        .wheel {
+            animation: spin 1s linear infinite;
+            transform-origin: center;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="clouds">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    </div>
+
+
+    <!-- Mountains -->
+    <div class="mountains">
+        <div class="mountain mountain1"></div>
+        <div class="mountain mountain2"></div>
+        <div class="mountain mountain3"></div>
+        <div class="mountain mountain4"></div>
+    </div>
+
+
+    <!-- Car -->
+    <div class="car">
+
+        <svg width="300px" height="300px" viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg" fill="#000000">
+
+            <g>
+
+            <!-- Car Top -->
+            <path d="M766.976 508.736c80.576 0 152.448 32.128 199.232 82.176"
+                fill="#AEBCC3"/>
+
+            <!-- Main Car Body -->
+            <path class="car-body"
+                d="M64.704 684.992c10.816 19.2 32.064 32.192 56.576 32.192h784.64c35.84 0 64.832-27.648 64.832-61.76v-17.408h-36.608a15.744 15.744 0 0 1-16.064-15.296V550.912a277.568 277.568 0 0 0-150.144-44.16h1.6l-55.04-0.256c-53.632-115.2-157.504-210.752-294.208-210.752-136.512 0-251.008 89.728-282.176 210.688h-16.832c-35.456 0-56.128 27.392-56.128 61.184"/>
+
+            <!-- Front Part -->
+            <path d="M64.704 654.464h13.76a39.168 39.168 0 0 0 40.064-38.272v-17.6c0-21.12-17.92-38.208-40.064-38.208h-13.376"
+                fill="#f6741e"/>
+
+                <path d="M766.976 508.736c80.576 0 152.448 32.128 199.232 82.176"
+                    fill="#AEBCC3" />
+
+                <path d="M64.704 684.992c10.816 19.2 32.064 32.192 56.576 32.192h784.64c35.84 0 64.832-27.648 64.832-61.76v-17.408h-36.608a15.744 15.744 0 0 1-16.064-15.296V550.912a277.568 277.568 0 0 0-150.144-44.16h1.6l-55.04-0.256c-53.632-115.2-157.504-210.752-294.208-210.752-136.512 0-251.008 89.728-282.176 210.688h-16.832c-35.456 0-56.128 27.392-56.128 61.184"
+                    fill="#4576e8" />
+
+                <path d="M64.704 654.464h13.76a39.168 39.168 0 0 0 40.064-38.272v-17.6c0-21.12-17.92-38.208-40.064-38.208h-13.376"
+                    fill="#f6741e" />
+
+                <!-- Left Wheel -->
+                <g class="wheel">
+                    <path d="M160 684.992a101.632 96.832 0 1 0 203.264 0 101.632 96.832 0 1 0-203.264 0Z"
+                        fill="#212b30" />
+
+                    <path d="M218.88 684.992a42.752 40.768 0 1 0 85.504 0 42.752 40.768 0 1 0-85.504 0Z"
+                        fill="#AEBCC3" />
+                </g>
+
+                <!-- Right Wheel -->
+                <g class="wheel">
+                    <path d="M652.032 684.992a101.568 96.832 0 1 0 203.136 0 101.568 96.832 0 1 0-203.136 0Z"
+                        fill="#212b30" />
+
+                    <path d="M710.912 684.992a42.752 40.768 0 1 0 85.504 0 42.752 40.768 0 1 0-85.504 0Z"
+                        fill="#AEBCC3" />
+                </g>
+
+                <path d="M966.272 591.104v-0.192a257.92 257.92 0 0 0-48.192-40V622.72c0 8.448 7.232 15.296 16.064 15.296h36.608v-42.304l-4.48-4.608z"
+                    fill="#f6741e" />
+
+                <path d="M405.568 335.616c-104.896 6.336-191.296 76.8-216.64 170.816h216.64V335.616zM445.696 506.432h216.64c-41.216-86.848-117.12-159.616-216.64-170.048v170.048z"
+                    fill="#aa2c61" />
+
+            </g>
+        </svg>
+
+    </div>
+
+    <!-- Road -->
+    <div class="road"></div>
+
+</body>
+</html>

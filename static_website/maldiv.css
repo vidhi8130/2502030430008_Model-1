@@ -1,0 +1,322 @@
+/* =========================
+   Global CSS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+nav{
+    width:100%;
+    height:80px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 190px;
+  height: 120px;
+
+  object-fit: contain;
+
+  cursor: pointer;
+}
+
+.nav-links{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:17px;
+    transition:0.3s;
+}
+
+.nav-links li a:hover{
+    color:#00bcd4;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* =========================
+   Book Button
+========================= */
+
+.book-btn{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:16px 45px;
+
+    background:#00bcd4;
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:500;
+
+    border-radius:50px;
+
+    transition:0.3s ease;
+}
+
+/* Hover Effect */
+
+.book-btn:hover{
+
+    background:#0097a7;
+
+    transform:translateY(-3px);
+}
+
+/* =========================
+   About Section
+========================= */
+
+.about{
+    width:85%;
+    margin:100px auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:50px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-content h2{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.about-content p{
+    line-height:1.9;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* =========================
+   Attractions
+========================= */
+
+.attractions{
+    width:85%;
+    margin:100px auto;
+    text-align:center;
+}
+
+.attractions h2{
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:20px;
+    font-size:25px;
+}
+
+/* =========================
+   Package
+========================= */
+
+.package{
+    width:100%;
+    background:#0f172a;
+
+    color:#fff;
+
+    padding:100px 20px;
+    text-align:center;
+}
+
+.package h2{
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.package-box{
+    max-width:500px;
+    margin:auto;
+
+    background:#1e293b;
+
+    padding:50px 30px;
+    border-radius:20px;
+}
+
+.package-box h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.package-box p{
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.package-box h1{
+    font-size:55px;
+    margin-bottom:30px;
+}
+
+.package-box button{
+    padding:15px 35px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#00bcd4;
+    color:#fff;
+
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    background:#020617;
+    color:#fff;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+footer h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        height:auto;
+
+        padding:15px 5%;
+    }
+
+    .nav-links{
+        gap:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .about-content h2,
+    .attractions h2,
+    .package h2{
+        font-size:35px;
+    }
+
+}
